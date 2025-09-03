@@ -48,6 +48,8 @@ public class Aluno {
 
   public void exibirStatus(){
     boolean isAprovado = isAprovado();
+    float media = calcularMedia();
+    float percentualFrequencia = calcularFrequencia();
     String status = "";
 
     if(isAprovado){
@@ -58,14 +60,14 @@ public class Aluno {
 
     status = isAprovado ? "aprovado" : "reprovado";
 
-    System.out.println("O aluno está: " + status);
+    System.out.println("O aluno está: " + status + ". Sua média é: " + media );
     System.out.println("Notas do aluno: ");
     for (int i = 0; i < notas.length; i++) {
       String msg = String.format("Nota %d: %f", (i + 1), notas[i]);
       System.out.println(msg);
     }
 
-    System.out.println("Frequências do aluno: ");
+    System.out.println("Frequências do aluno: " + percentualFrequencia);
     for (int i = 0; i < frequencias.length; i++) {
       String msg = String.format("Frequência %d: %s", i + 1, frequencias[i] ? "S" : "N");
       System.out.println(msg);
@@ -105,7 +107,7 @@ public class Aluno {
 
   public void setIntegrado(boolean integrado) {
     this.integrado = integrado;
-  }
+  }  
 
   public float[] getNotas() {
     return notas;
