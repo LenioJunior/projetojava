@@ -55,7 +55,7 @@ public class App {
     }
 
     public void appAlunos(){
-        Aluno a1 = new Aluno();
+        AlunoOld a1 = new AlunoOld();
         a1.lerNotas();
         a1.lerFrequencia();
         a1.exibirStatus();
@@ -68,66 +68,7 @@ public class App {
         // //app.appCarros();
         // app.appAlunos();
 
-        Scanner sc = new Scanner(System.in);
-        float notas[] = new float[3];
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Informe a nota: " + (i + 1)); //printf("Informe a nota: %d");
-            notas[i] = sc.nextFloat(); //scanf("%f", &notas[i]);
-        }
-        
-        float soma = 0;        
-        for(int i = 0; i < 3; i++){
-            soma = soma + notas[i];
-        }
-
-        float media = (float) soma / 3;       
-
-        int frequencia[] = new int[4];
-
-        // 0 - 1 - 1 - 1
-
-        for(int i = 0; i < 4; i++){
-            System.out.println(String.format("Informe a frequência %d.", (i + 1)));
-            frequencia[i] = sc.nextInt();
-        }
-
-        int contaPresenca = 0;
-        for (int i = 0; i < 4; i++) {
-            if(frequencia[i] == 1){
-                contaPresenca++;
-            }
-        }
-
-        String v = String.format("Sua media é: %.2f", media);
-        System.out.println(v);
-        
-        float percentualFrequencia = (float) contaPresenca / 4 * 100; // frequencia.length
-
-        System.out.println(String.format("Seu percentual de frequência é: %.2f", percentualFrequencia));
-
-        // contaPresenca 3 
-
-        if(percentualFrequencia >= 75 && media >= 6){
-            System.out.println("Aprovado");
-        } else {
-            System.out.println("Reprovado");
-        }
-
-        // Valores lidos para nota: 8, 9, 3
-        // Valores lidos para frequencia: 1, 1, 0, 0
-        for (int i = 0; i < notas.length; i++) {
-            System.out.println(String.format("Sua nota %d: %.2f", (i + 1), notas[i]));
-        }
-
-        for (int i = 0; i < frequencia.length; i++) {
-            String status = "";
-            if(frequencia[i] == 1){
-                status = "Presente";
-            } else {
-                status = "Ausente";
-            }
-            System.out.println(String.format("Sua frequência %d: %s", (i + 1), status));
-        }
+       Alunos alunos = new Alunos();
+       alunos.fazTudo();
     }
 }

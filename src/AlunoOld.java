@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class Aluno {
+public class AlunoOld {
   private String nome;
   private String matricula;
   private boolean integrado;
