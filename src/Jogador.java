@@ -3,6 +3,22 @@ public class Jogador {
   private int poder;
   private String nome;
 
+  public int getVida() {
+    return vida;
+  }
+
+  public int getPoder() {
+    return poder;
+  }
+
+  public String getNome() {
+    return nome;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
   public Jogador(String nome, int vidaInicial, int poderInicial){
     this.nome = nome;
     vida = vidaInicial;
