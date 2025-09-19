@@ -1,4 +1,5 @@
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -67,8 +68,5 @@ public class App {
         // //app.lerDadosPessoa();
         // //app.appCarros();
         // app.appAlunos();
-
-       Alunos alunos = new Alunos();
-       alunos.fazTudo();
     }
 }

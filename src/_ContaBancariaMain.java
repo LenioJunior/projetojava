@@ -1,8 +1,8 @@
-public class ContaBancariaMain {
+public class _ContaBancariaMain {
   public static void main(String[] args) {
     System.out.println("--- Sistema Bancário ---");
 
-    ContaBancaria contaLenio = new ContaBancaria("Lênio", "123");
+    _ContaBancaria contaLenio = new _ContaBancaria("Lênio", "123");
     contaLenio.exibeDadosConta();
     
     contaLenio.depositar(100);

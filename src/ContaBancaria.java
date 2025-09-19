@@ -1,71 +1,60 @@
+/*
+ * Crie uma classe chamada ContaBancaria com os seguintes atributos privados:
+titular (String)    cpf (String)    saldo (double)
+
+Crie os métodos getters e setters para cada atributo. Lembrando que o saldo deve ter apenas getter.
+Crie um método depositar() que recebe um valor a ser depositado.
+Validar se o valor a ser depositado é maior do que zero.
+Crie um método sacar() que recebe um valor a ser sacado e que retorna o valor sacado.
+Validar se há saldo suficiente para efetuar o saque.
+Crie um construtor para a classe, que receba os parâmetros titular, cpf e saldoInicial.
+ */
+
 public class ContaBancaria {
-  
   private String titular;
   private String cpf;
-  private float saldo = 0;
+  private double saldo;
 
   public ContaBancaria(String titular, String cpf){
     this.titular = titular;
     this.cpf = cpf;
   }
 
-  public ContaBancaria(String titular, String cpf, float saldoInicial){
+  public boolean depositar(double valor){
+    if(valor > 0){
+      saldo += valor;
+      return true;
+    }
+    return false;
+  }
+
+  public boolean sacar(double valor){
+    if(valor > 0 && valor <= saldo){
+      saldo -= valor;
+      return true;
+    }
+    return false;
+  }
+
+  public void trocarTitularidade(String titular, String cpf){
+    // Validações
     this.titular = titular;
     this.cpf = cpf;
-    saldo = saldoInicial;
-  }
-
-  public void depositar(float valor){
-    if (valor > 0) {
-      saldo += valor;
-      System.out.println(String.format("Depósito no valor de %.2f aprovado!", valor));
-    } else {
-      System.out.println("Depósito reprovado. Valor deve ser positivo!");
-    }
-  }
-
-  public void sacar(float valor){
-    if (valor > 0 && valor <= saldo) {
-      saldo -= valor;
-      System.out.println(String.format("Saque no valor de %.2f efetuado!", 
-        valor, saldo));
-    } else {
-      if (valor < 0){
-        System.out.println("O valor deve ser maior do que zero.");
-      } else {
-        System.out.println("Não há saldo suficiente!");
-      }      
-    }
-  }
-
-  public void exibeDadosConta(){
-    String message = String.format("Titular da Conta: %s\nCPF do Titular: %s\nSaldo Atual: %.2f",
-      titular, cpf, saldo);
-    System.out.println(message);
-  }
-
-  public void mostraSaldo(){
-    System.out.println(String.format("O saldo atual é: %.2f", saldo));
   }
 
   public String getTitular() {
     return titular;
   }
-
-  public void setTitular(String titular) {
-    this.titular = titular;
-  }
-
+  // public void setTitular(String titular) {
+  //   this.titular = titular;
+  // }
   public String getCpf() {
     return cpf;
   }
-
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
-  }
-
-  public float getSaldo() {
+  // public void setCpf(String cpf) {
+  //   this.cpf = cpf;
+  // }
+  public double getSaldo() {
     return saldo;
   }
-  
 }
