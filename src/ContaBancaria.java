@@ -45,15 +45,11 @@ public class ContaBancaria {
   public String getTitular() {
     return titular;
   }
-  // public void setTitular(String titular) {
-  //   this.titular = titular;
-  // }
+
   public String getCpf() {
     return cpf;
   }
-  // public void setCpf(String cpf) {
-  //   this.cpf = cpf;
-  // }
+
   public double getSaldo() {
     return saldo;
   }
