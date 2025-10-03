@@ -1,3 +1,4 @@
+package Criptografia;
 import java.util.Scanner;
 
 public class MainCripto {

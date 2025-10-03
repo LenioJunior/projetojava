@@ -1,3 +1,4 @@
+package Criptografia;
 public class Cripto {
   private String conteudo;
   private String criptografado = "";

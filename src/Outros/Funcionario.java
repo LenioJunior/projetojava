@@ -1,3 +1,4 @@
+package Outros;
 public class Funcionario {
   public static int contador;
 

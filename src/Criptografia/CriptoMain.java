@@ -1,3 +1,4 @@
+package Criptografia;
 public class CriptoMain {
   public static void main(String[] args) {
     Criptografia c = new Criptografia("Muito prazer");

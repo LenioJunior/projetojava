@@ -1,7 +1,11 @@
+package Pessoa;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Stream;
+
+import Aluno.AlunoOld;
+import Outros.Carro;
 
 public class App {
 

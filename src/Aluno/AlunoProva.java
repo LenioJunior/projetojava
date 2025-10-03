@@ -1,3 +1,4 @@
+package Aluno;
 import java.util.Scanner;
 
 public class AlunoProva {

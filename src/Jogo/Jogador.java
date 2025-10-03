@@ -1,3 +1,4 @@
+package Jogo;
 public class Jogador {
   private int vida;
   private int poder;
