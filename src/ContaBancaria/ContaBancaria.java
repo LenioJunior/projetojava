@@ -10,6 +10,8 @@ Validar se há saldo suficiente para efetuar o saque.
 Crie um construtor para a classe, que receba os parâmetros titular, cpf e saldoInicial.
  */
 
+package ContaBancaria;
+
 public class ContaBancaria {
   private String titular;
   private String cpf;
