@@ -1,3 +1,5 @@
+package ContaBancaria;
+
 import java.util.Scanner;
 
 public class Funcoes {

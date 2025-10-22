@@ -1,4 +1,5 @@
 package ContaBancaria;
+
 import java.util.Scanner;
 
 public class MainContaBancaria {
@@ -38,6 +39,13 @@ public class MainContaBancaria {
   }
 
   public static void main(String[] args) {
+
+    if (args.length > 0) {
+      for (int i = 0; i < args.length; i++) {
+        System.out.println(String.format("Parametro %d: %s", i, args[i]));
+      }      
+    }
+
     MainContaBancaria main = new MainContaBancaria();
     int opcao;
     ContaBancaria cb1 = null;
