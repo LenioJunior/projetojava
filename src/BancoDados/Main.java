@@ -38,5 +38,6 @@ public class Main {
           break;
       }
     } while (opcao != 3);
+    sc.close();
   }
 }
