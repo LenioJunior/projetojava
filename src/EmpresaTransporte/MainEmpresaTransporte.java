@@ -1,7 +1,10 @@
 package EmpresaTransporte;
 
+import java.util.ArrayList;
+
 public class MainEmpresaTransporte {
   public static void main(String[] args) {
+
     Motorista motorista = new Motorista("Juliano", 1000, 5);
     motorista.calcularSalario();
     motorista.exibirInfo();
