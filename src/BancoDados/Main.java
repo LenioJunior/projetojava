@@ -6,8 +6,7 @@ public class Main {
   public static void main(String[] args) {
 
     //IStorage fs = new FileStorage("/home/lenio/meu_arquivo.txt");
-    //IStorage fs = new JsonStorage("/home/lenio/meu_arquivo.json");
-    IStorage fs = new MySQLStorage();
+    IStorage fs = new JsonStorage("/home/lenio/meu_arquivo.json");
     Scanner sc = new Scanner(System.in);
     int opcao;
 
