@@ -1,5 +1,25 @@
 package Composicao.Materiais;
 
-public class Material {
-  
+public abstract class Material {
+  private String descricao;
+  private float valor;
+  private TipoMaterial tipo;
+
+  public Material(String descricao, float valor, TipoMaterial tipo){
+    this.descricao = descricao;
+    this.valor = valor;
+    this.tipo = tipo;
+  }
+
+  public String getDescricao() {
+    return descricao;
+  }
+
+  public float getValor() {
+    return valor;
+  }
+
+  public TipoMaterial getTipo() {
+    return tipo;
+  }
 }

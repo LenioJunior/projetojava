@@ -1,8 +1,10 @@
-package Composicao;
+package Composicao.Operacional;
 
 import java.util.ArrayList;
 
+import Composicao.Materiais.Material;
 import Composicao.Materiais.Peca;
+import Composicao.Pessoal.Cliente;
 import Composicao.Pessoal.Funcionario;
 import Composicao.Veiculos.Veiculo;
 
@@ -10,46 +12,47 @@ public class Oficina {
 
   private String nome;
 
-  private ArrayList<Peca> pecas;
   private ArrayList<Funcionario> funcionarios;
+  private ArrayList<Material> materiais;
   private ArrayList<Veiculo> veiculos;
+  private ArrayList<Cliente> clientes;
 
   /*
     Adicionar método para adicionarFuncionario, removerFuncionario e listarFuncionarios
     Adicionar método para adicionarVeiculo, removerVeiculo, listarVeiculos e listarOrdensdeServico
-   */
+  */
 
   public Oficina(String nome) {
-    pecas = new ArrayList<>();
+    materiais = new ArrayList<>();
     funcionarios = new ArrayList<>();
     veiculos = new ArrayList<>();
 
     this.nome = nome;
   }
 
-  public void adicionarPeca(Peca peca){
-    pecas.add(peca);
+  public void adicionarMaterial(Material material){
+    materiais.add(material);
   }
 
-  public Peca removerPeca(Peca peca){
-    int indice = pecas.indexOf(peca);
+  public Material removerPeca(Material material){
+    int indice = materiais.indexOf(material);
     if (indice == -1)
       return null;
     
-    return pecas.remove(indice);
+    return materiais.remove(indice);
   }
 
-  public void listarPecas(){
+  public void listarMateriais(){
     System.out.println("------ Oficina -------");
     System.out.println(String.format("%s", nome));
-    System.out.println("------ Listagem de Peças ------");
-    for(Peca peca : pecas){
-      System.out.println(String.format("Peça: %s. Valor: %.2f", peca.getNome(), peca.getValor()));
+    System.out.println("------ Listagem de Materiais ------");
+    for(Material material : materiais){
+      System.out.println(String.format("Material: %s. Valor: %.2f", material.getDescricao(), material.getValor()));
     }
   }
 
-  public ArrayList<Peca> getPecas() {
-    return pecas;
+  public ArrayList<Material> getMateriais() {
+    return materiais;
   }
 
   public String getNome() {

@@ -1,23 +1,11 @@
 package Composicao.Materiais;
 
-public class Peca {
-  private String nome;
-  private double valor;
+public class Peca extends Material{
 
-  public Peca(String nome, double valor) {
-    this.nome = nome;
-    this.valor = valor;
-  }
+  private String modelo;
 
-  public String getNome() {
-    return nome;
+  public Peca(String descricao, float valor, TipoMaterial tipo, String modelo) {
+    super(descricao, valor, tipo);
+    this.modelo = modelo;
   }
-  
-  public double getValor() {
-    return valor;
-  }
-
-  public void setValor(double valor) {
-    this.valor = valor;
-  }  
 }

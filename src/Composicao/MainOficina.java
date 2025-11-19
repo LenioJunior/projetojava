@@ -2,30 +2,39 @@ package Composicao;
 
 import java.util.ArrayList;
 
+import Composicao.Materiais.Ferramenta;
 import Composicao.Materiais.Peca;
+import Composicao.Materiais.TipoMaterial;
+import Composicao.Operacional.Oficina;
 
 public class MainOficina {
+
+  public void CreateOficina(Oficina oficina){
+
+  }
+
   public static void main(String[] args) {
     
-    Peca martelo = new Peca("Martelo", 80);
-    Peca chaveFenda = new Peca("Chave de Fenda", 35);
-    Peca alicate = new Peca("Alicate", 16.7);
+    Ferramenta martelo = new Ferramenta("Martelo", 80f, TipoMaterial.FERRAMENTA, "Amarela");
+    Ferramenta chaveFenda = new Ferramenta("Chave de Fenda", 35,
+    TipoMaterial.FERRAMENTA, "N18");
+    Ferramenta alicate = new Ferramenta("Alicate", 16.7f, TipoMaterial.FERRAMENTA, "Amarela");
 
     Oficina oficina = new Oficina("Oficina POO");
-    oficina.adicionarPeca(martelo);
-    oficina.adicionarPeca(chaveFenda);
-    oficina.adicionarPeca(alicate);
+    oficina.adicionarMaterial(martelo);
+    oficina.adicionarMaterial(chaveFenda);
+    oficina.adicionarMaterial(alicate);
 
-    oficina.listarPecas();
+    oficina.listarMateriais();
 
     oficina.removerPeca(martelo);
 
-    oficina.listarPecas();
+    oficina.listarMateriais();
 
-    Peca philips = new Peca("Philips", 41);
+    Peca philips = new Peca("Philips", 41, TipoMaterial.PECA, "Número 20");
 
-    oficina.adicionarPeca(philips);
+    oficina.adicionarMaterial(philips);
 
-    oficina.listarPecas();
+    oficina.listarMateriais();
   }
 }
