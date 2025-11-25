@@ -9,4 +9,10 @@ public abstract class Funcionario {
     this.nome = nome;
     this.salario = salario;
   }
+
+  public void listarBase(){
+    System.out.println(String.format("Funcionário: %s. Salário: %.2f", nome, salario));
+  }
+
+  public abstract void listar();
 }

@@ -11,6 +11,10 @@ public abstract class Material {
     this.tipo = tipo;
   }
 
+  public void listar(){
+    System.out.println(String.format("Material: %s. Valor: %.2f", getDescricao(), getValor()));
+  }
+
   public String getDescricao() {
     return descricao;
   }

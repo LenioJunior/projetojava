@@ -10,4 +10,8 @@ public class Cliente {
     this.nome = nome;
     this.dataCadastro = dataCadastro;
   }
+
+  public void listar(){
+    System.out.println(String.format("Cliente: %s. Data Cadastro: %s", nome, dataCadastro));
+  }
 }

@@ -9,4 +9,9 @@ public class Mecanico extends Funcionario{
     this.anosExperiencia = anosExperiencia;
   }
   
+  @Override
+  public void listar(){
+    super.listarBase();
+    System.out.println(String.format("Anos Experiência: %d", anosExperiencia));
+  }
 }

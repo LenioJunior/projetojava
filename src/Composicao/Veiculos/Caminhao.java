@@ -10,4 +10,9 @@ public class Caminhao extends Veiculo {
     super(placa, cliente);
     this.tacografo = tacografo;
   }
+
+  @Override
+  public void listar(){
+    System.out.println(String.format("Caminhao Placa: %s. Tacógrafo: %d", getPlaca(), tacografo));
+  }
 }

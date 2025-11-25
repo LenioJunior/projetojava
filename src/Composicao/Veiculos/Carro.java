@@ -10,4 +10,9 @@ public class Carro extends Veiculo {
     super(placa, cliente);
     this.numeroPassageiros = numeroPassageiros;
   }
+
+  @Override
+  public void listar(){
+    System.out.println(String.format("Carro Placa: %s. Número Passageiros: %d", getPlaca(), numeroPassageiros));
+  }
 }

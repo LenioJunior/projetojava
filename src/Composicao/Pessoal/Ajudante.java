@@ -9,4 +9,9 @@ public class Ajudante extends Funcionario {
     this.formacao = formacao;
   }
   
+  @Override
+  public void listar(){
+    super.listarBase();
+    System.out.println(String.format("Formação: %s", formacao));
+  }
 }
