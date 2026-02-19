@@ -3,7 +3,6 @@ package Composicao.Operacional;
 import java.util.ArrayList;
 
 import Composicao.Materiais.Material;
-import Composicao.Materiais.Peca;
 import Composicao.Pessoal.Ajudante;
 import Composicao.Pessoal.Cliente;
 import Composicao.Pessoal.Funcionario;

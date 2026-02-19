@@ -6,7 +6,7 @@ public class MainContaBancaria {
 
   private Scanner scanner = new Scanner(System.in);
 
-  public void exibeMenu(){
+  public void exibeMenu() {
     System.out.println("Sistema Bancário Versão 1.0");
     System.out.println("----------------------");
     System.out.println("1) Criar conta bancária");
@@ -17,12 +17,12 @@ public class MainContaBancaria {
     System.out.println("6) Sair");
   }
 
-  public int lerOpcao(){
+  public int lerOpcao() {
     System.out.println("Informe a opção desejada:");
     return scanner.nextInt();
   }
 
-  public ContaBancaria criarConta(){
+  public ContaBancaria criarConta() {
     System.out.println("Informe o nome do titular");
     String titular = scanner.nextLine();
 
@@ -31,11 +31,12 @@ public class MainContaBancaria {
 
     ContaBancaria cb1 = new ContaBancaria(titular, cpf);
 
-    return cb1; 
+    return cb1;
   }
 
-  public void exibirDadosConta(ContaBancaria cb1){
-      String msg = String.format("Titular: %s\nCPF: %s\nSaldo: %.2f", cb1.getTitular(), cb1.getCpf(), cb1.getSaldo());
+  public void exibirDadosConta(ContaBancaria cb1) {
+    String msg = String.format("Titular: %s\nCPF: %s\nSaldo: %.2f", cb1.getTitular(), cb1.getCpf(), cb1.getSaldo());
+    System.out.println(msg);
   }
 
   public static void main(String[] args) {
@@ -43,7 +44,7 @@ public class MainContaBancaria {
     if (args.length > 0) {
       for (int i = 0; i < args.length; i++) {
         System.out.println(String.format("Parametro %d: %s", i, args[i]));
-      }      
+      }
     }
 
     MainContaBancaria main = new MainContaBancaria();
@@ -55,7 +56,7 @@ public class MainContaBancaria {
       opcao = main.lerOpcao();
       switch (opcao) {
         case 1:
-          cb1 = main.criarConta();                
+          cb1 = main.criarConta();
           break;
         case 2:
           main.exibirDadosConta(cb1);
@@ -74,43 +75,45 @@ public class MainContaBancaria {
           break;
       }
     } while (opcao != 6);
-    
+
     Scanner scanner = new Scanner(System.in);
     System.out.println("Criando uma conta bancária.");
 
-    // System.out.println("Informe o valor a ser depositado");
-    // double valor = scanner.nextDouble();
-    // cb1.depositar(valor);
+    System.out.println("Informe o valor a ser depositado");
+    double valor = scanner.nextDouble();
+    cb1.depositar(valor);
 
-    // msg = String.format("Titular: %s\nCPF: %s\nSaldo: %.2f", cb1.getTitular(), cb1.getCpf(), cb1.getSaldo());
-    // System.out.println(msg);
+    String msg = String.format("Titular: %s\nCPF: %s\nSaldo: %.2f", cb1.getTitular(), cb1.getCpf(), cb1.getSaldo());
+    System.out.println(msg);
 
-    // System.out.println("Informe o valor a ser depositado");
-    // valor = scanner.nextDouble();
+    System.out.println("Informe o valor a ser depositado");
+    valor = scanner.nextDouble();
 
-    // if(cb1.depositar(valor)){
-    //   System.out.println("Depósito efetuado com sucesso!");
-    // } else {
-    //   System.out.println("Depósito não efetuado. Valor deve ser maior do que zero!");
-    // }
-    // System.out.println(String.format("Saldo: %.2f", cb1.getSaldo()));
+    if (cb1.depositar(valor)) {
+      System.out.println("Depósito efetuado com sucesso!");
+    } else {
+      System.out.println("Depósito não efetuado. Valor deve ser maior do que zero!");
+    }
+    System.out.println(String.format("Saldo: %.2f", cb1.getSaldo()));
 
-    // System.out.println("Informe o valor a ser sacado");
-    // valor = scanner.nextDouble();
-    // if(cb1.sacar(valor)){
-    //   System.out.println("Saque efetuado com sucesso!");
-    // } else {
-    //   System.out.println("Saldo insuficiente!");
-    // }
-    // System.out.println(String.format("Saldo: %.2f", cb1.getSaldo()));
+    System.out.println("Informe o valor a ser sacado");
+    valor = scanner.nextDouble();
+    if (cb1.sacar(valor)) {
+      System.out.println("Saque efetuado com sucesso!");
+    } else {
+      System.out.println("Saldo insuficiente!");
+    }
+    System.out.println(String.format("Saldo: %.2f", cb1.getSaldo()));
 
-    // System.out.println("Informe o valor a ser sacado");
-    // valor = scanner.nextDouble();
-    // if(cb1.sacar(valor)){
-    //   System.out.println("Saque efetuado com sucesso!");
-    // } else {
-    //   System.out.println("Saldo insuficiente!");
-    // }
-    // System.out.println(String.format("Saldo: %.2f", cb1.getSaldo()));
+    System.out.println("Informe o valor a ser sacado");
+    valor = scanner.nextDouble();
+    if (cb1.sacar(valor)) {
+      System.out.println("Saque efetuado com sucesso!");
+    } else {
+      System.out.println("Saldo insuficiente!");
+    }
+    System.out.println(String.format("Saldo: %.2f", cb1.getSaldo()));
+
+    scanner.close();
   }
 }

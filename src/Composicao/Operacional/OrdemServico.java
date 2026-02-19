@@ -17,4 +17,12 @@ public class OrdemServico {
   public void listarOrdemServico(){
     
   }
+
+  public ArrayList<Funcionario> getFuncionarios() {
+    return funcionarios;
+  }
+
+  public ArrayList<Peca> getPecas() {
+    return pecas;
+  }
 }

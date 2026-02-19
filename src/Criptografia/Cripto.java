@@ -4,10 +4,10 @@ public class Cripto {
   private String criptografado = "";
   private String descriptografado = "";
 
-  private char alfabeto [] = {
-   'a','b','c','d','e','f','g','h','i','j',
-   'k','l','m','n','o','p','q','r','s','t',
-   'u','v','w','x','y','z', ' '};
+  // private char alfabeto [] = {
+  //  'a','b','c','d','e','f','g','h','i','j',
+  //  'k','l','m','n','o','p','q','r','s','t',
+  //  'u','v','w','x','y','z', ' '};
 
 
   public Cripto(String conteudo) {

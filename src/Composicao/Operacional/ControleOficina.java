@@ -3,7 +3,6 @@ package Composicao.Operacional;
 import java.util.Scanner;
 
 import Composicao.Pessoal.Ajudante;
-import Composicao.Pessoal.Funcionario;
 import Composicao.Pessoal.Mecanico;
 
 public class ControleOficina {

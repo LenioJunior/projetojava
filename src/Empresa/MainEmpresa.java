@@ -7,6 +7,7 @@ public class MainEmpresa {
     mc.setQuantidadeVendida(2);
     float faturamento = mc.obterFaturamento();
     mc.exibirFaturamento();
+    System.out.println(String.format("O faturamento é: %.2f", faturamento));
 
     Volkswagem vw = new Volkswagem();
     vw.setPreco(50);

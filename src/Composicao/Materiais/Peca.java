@@ -8,4 +8,8 @@ public class Peca extends Material{
     super(descricao, valor, tipo);
     this.modelo = modelo;
   }
+
+  public String getModelo() {
+    return modelo;
+  }
 }

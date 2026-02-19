@@ -10,7 +10,7 @@ public class Funcionario {
 
   public Funcionario(String nome, int cargo){
     this.nome = nome;
-    this.cargo = cargo;
+    Funcionario.cargo = cargo;
   }
 
   public static void boasVindas(){
@@ -26,5 +26,21 @@ public class Funcionario {
       cargo = 0;
       return false;
     }
+  }
+
+  public static int getContador() {
+    return contador;
+  }
+
+  public String getNome() {
+    return nome;
+  }
+
+  public static int getProgresso() {
+    return progresso;
+  }
+
+  public static int getCargo() {
+    return cargo;
   }
 }

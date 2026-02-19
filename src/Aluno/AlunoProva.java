@@ -53,6 +53,7 @@ public class AlunoProva {
     // notas[0] = scanner.nextDouble();
     // notas[1] = scanner.nextDouble();
     // notas[2] = scanner.nextDouble();
+    scanner.close();
   }
 
   public double[] getNotas(){

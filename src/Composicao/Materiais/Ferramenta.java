@@ -7,4 +7,8 @@ public class Ferramenta extends Material {
     super(descricao, valor, tipo);
     this.especificacoes = especificacoes;
   }
+
+  public String getEspecificacoes() {
+    return especificacoes;
+  }
 }
