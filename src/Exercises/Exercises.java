@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Exercises {
 
-    public static void ex1_StringComparison() {
-        Scanner sc = new Scanner(System.in);
+    public static Scanner sc = new Scanner(System.in);
 
+    public static void ex1_StringComparison() {
         System.out.print("Digite o primeiro nome: ");
         String nome1 = sc.nextLine();
 
@@ -25,13 +25,9 @@ public class Exercises {
             System.out.println(nome2 + " vem antes alfabeticamente.");
         else
             System.out.println("São equivalentes alfabeticamente.");
-
-        sc.close();
     }
 
     public static void ex2_TextAnalyser() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite uma frase: ");
         String frase = sc.nextLine();
 
@@ -55,13 +51,9 @@ public class Exercises {
         System.out.println("Sem espaços: " + semEspaco);
         System.out.println("Vogais: " + vogais);
         System.out.println("Consoantes: " + consoantes);
-
-        sc.close();
     }
 
     public static void ex3_PasswordAnalyser() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite a senha: ");
         String senha = sc.nextLine();
 
@@ -86,13 +78,9 @@ public class Exercises {
             System.out.println("Senha válida!");
         else
             System.out.println("Senha inválida.");
-
-        sc.close();
     }
 
     public static void ex4_InverterAndPalindromo() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite uma frase: ");
         String texto = sc.nextLine();
 
@@ -110,13 +98,9 @@ public class Exercises {
         }
 
         System.out.println("É palíndromo? " + limpa.equals(limpaInv));
-
-        sc.close();
     }
 
     public static void ex5_Tokenization() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite no formato nome;idade;curso;ira: ");
         String linha = sc.nextLine();
 
@@ -133,13 +117,9 @@ public class Exercises {
         System.out.println("IRA: " + ira);
 
         System.out.println(ira >= 7 ? "Acima da média" : "Abaixo da média");
-
-        sc.close();
     }
 
     public static void ex6_WordsFrequency() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite um texto: ");
         String texto = sc.nextLine();
 
@@ -162,13 +142,9 @@ public class Exercises {
         System.out.println("Total palavras: " + palavras.length);
         System.out.println("Ocorrências: " + cont);
         System.out.println("Palavra mais longa: " + maior);
-
-        sc.close();
     }
 
     public static void ex7_MailValidator() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite o e-mail: ");
         String email = sc.nextLine();
 
@@ -189,13 +165,9 @@ public class Exercises {
             valido = false;
 
         System.out.println(valido ? "E-mail válido" : "E-mail inválido");
-
-        sc.close();
     }
 
     public static void ex8_StringShrink() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite a string: ");
         String s = sc.nextLine();
 
@@ -212,13 +184,9 @@ public class Exercises {
         }
 
         System.out.println("Compactada: " + sb.toString());
-
-        sc.close();
     }
 
     public static void ex9_NameFormatter() {
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Digite o nome completo: ");
         String nome = sc.nextLine().trim().toLowerCase();
 
@@ -237,8 +205,6 @@ public class Exercises {
         }
 
         System.out.println(sobrenome + ", " + restante.toString().trim());
-
-        sc.close();
     }
 
     public static void runner() {
@@ -263,9 +229,11 @@ public class Exercises {
                 System.out.println("Informe sua opção:");
 
                 opcao = sc.nextInt();
-                sc.nextLine();
 
                 switch (opcao) {
+                    case 0:
+                        System.out.println("Saindo...");
+                        break;
                     case 1:
                         ex1_StringComparison();
                         break;
@@ -298,7 +266,7 @@ public class Exercises {
                         break;
                 }
             } while (opcao != 0);
-            System.out.println("Saindo...");
+            
             sc.close();
 
         } catch (InputMismatchException e) {
