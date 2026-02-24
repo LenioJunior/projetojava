@@ -106,7 +106,7 @@ public class Exercises {
         String limpa = texto.toLowerCase().replace(" ", "");
         String limpaInv = "";
         for (int i = limpa.length() - 1; i >= 0; i--) {
-            invertida += limpa.charAt(i);
+            limpaInv += limpa.charAt(i);
         }
 
         System.out.println("É palíndromo? " + limpa.equals(limpaInv));
@@ -242,10 +242,10 @@ public class Exercises {
     }
 
     public static void runner() {
-        Scanner sc = new Scanner(System.in);
 
         try {
-            int opcao;
+            int opcao = -1;
+            Scanner sc = new Scanner(System.in);
 
             do {
                 System.out.println(" --- Lista de Exercícios --- ");
@@ -263,6 +263,8 @@ public class Exercises {
                 System.out.println("Informe sua opção:");
 
                 opcao = sc.nextInt();
+                sc.nextLine();
+
                 switch (opcao) {
                     case 1:
                         ex1_StringComparison();
@@ -297,12 +299,11 @@ public class Exercises {
                 }
             } while (opcao != 0);
             System.out.println("Saindo...");
+            sc.close();
 
         } catch (InputMismatchException e) {
             e.printStackTrace();
         }
-
-        sc.close();
     }
 
     public static void main(String[] args) {
